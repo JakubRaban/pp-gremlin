@@ -5,6 +5,7 @@ from password import password
 def print_results(callback):
     for result in callback.results():
         print(result)
+    print()
 
 
 vertex_queries = [
@@ -81,10 +82,15 @@ cosmos_client = client.Client('wss://zuz.gremlin.cosmosdb.azure.com:443/', 'g',
 cleanup_db()
 setup_db()
 
+print('People with more than one device')
 print_results(find_people_with_more_than_one_device())
+print('Devices with no more than 4 cores')
 print_results(find_devices_with_4_cores_or_less())
+print('People who know somebody with windows device')
 print_results(find_people_who_know_someone_with_windows_device())
 update_ubuntu_to_21()
+print('Ubuntu updated to v21')
 kill_people_who_know_no_one()
+print('People with no friends killed')
 
 cosmos_client.close()
