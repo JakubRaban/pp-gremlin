@@ -1,0 +1,14 @@
+scheme: 'wss'
+  hosts: ['zuz.gremlin.cosmosdb.azure.com']
+  port: 443
+  ssl_certfile: ''
+  ssl_keyfile: ''
+  ssl_password: ''
+  username: '/dbs/graphdb/colls/Persons'
+  password: ''
+  response_timeout: 15
+  max_conns: 4
+  min_conns: 1
+  max_times_acquired: 16
+  max_inflight: 64
+  message_serializer: 'goblin.driver.GraphSONMessageSerializer'
